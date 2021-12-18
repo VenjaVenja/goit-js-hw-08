@@ -11,9 +11,13 @@ player.on('timeupdate', throttle(onPlay, 1000));
 function onPlay({ seconds }) {
     localStorage.setItem(CURRENT_TIME, seconds)
 }
-    // data is an object containing properties specific to that event
+
 setCurrentTime()
+
 function setCurrentTime() {
+    if (!localStorage.getItem(CURRENT_TIME)){
+        return
+    };
+
     player.setCurrentTime(localStorage.getItem(CURRENT_TIME))
 }
-
