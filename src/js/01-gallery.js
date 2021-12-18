@@ -9,10 +9,9 @@ const galleryEl = document.querySelector('.gallery');
 const galleryMarkup = galleryItems
 .map(({preview,original,description})=>
 `<div class = "gallery__item">
-<a class="gallery__item" href="${original}">
+<a class="link" href="${original}">
   <img class="gallery__image" src="${preview}" alt="${description}" />
-</a></div>`
-)
+</a></div>`)
 .join("");
 
 
