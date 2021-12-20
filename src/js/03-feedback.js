@@ -8,6 +8,7 @@ const refs = {
 
 const STORAGY_KEY = 'feedback-form-state';
 let formData = {};
+// console.log(formData);
 formFieldsOut();
 
 
@@ -33,7 +34,9 @@ function formFieldsOut() {
     if (saveInputField === null || saveInputField === undefined) {
         return
     } formData = saveInputField;
-        console.log(saveInputField);
-        refs.email.value = saveInputField.email;
-        refs.textarea.value = saveInputField.message;
+
+    console.log(saveInputField);
+    
+        refs.email.value = saveInputField.email ? saveInputField.email : refs.email.value;
+        refs.textarea.value = saveInputField.message ? saveInputField.message : refs.textarea.value;
 };
