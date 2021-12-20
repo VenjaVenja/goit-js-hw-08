@@ -33,10 +33,7 @@ function formFieldsOut() {
     if (saveInputField === null || saveInputField === undefined) {
         return
     } formData = saveInputField;
-
-    if (saveInputField) {
         console.log(saveInputField);
         refs.email.value = saveInputField.email;
         refs.textarea.value = saveInputField.message;
-    }
 };
